@@ -11,14 +11,24 @@
 
 <?php 
     require './DS/stack.php';
+    require './DS/queue.php';
 
     use DS\Stack;
-
     $stack = new Stack();
     $stack->push('hi');
     $stack->push('hello');
     $stack->pop();
     $stack->listElements();
+
+
+    use DS\Queue;
+    $queue = new Queue();
+    $queue->enqueue('element1');
+    $queue->dequeue();
+    $queue->dequeue();
+
+    
+    
 ?>
 </body>
 </html>
