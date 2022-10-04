@@ -20,15 +20,26 @@
     $stack->pop();
     $stack->listElements();
 
-
+    echo "<br>";
+    
     use DS\Queue;
     $queue = new Queue();
     $queue->enqueue('element1');
     $queue->dequeue();
     $queue->dequeue();
 
-    
-    
+    echo "<hr>";
+
+    require './DS/node.php';
+    require './DS/linkedList.php';
+
+    use DS\LinkedList;
+    use DS\Node;
+
+    $node1 = new Node(1, null);
+    $node2 =  new Node(2, null);
+    $node1->setNext($node1);
+    var_dump($node1->getNext());
 ?>
 </body>
 </html>
